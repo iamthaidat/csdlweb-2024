@@ -1,0 +1,155 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2563eb;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ẩn phần logo tràn ra */
+}
+
+.logo-and-balance {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative; /* Thiết lập vị trí tương đối */
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo img.animated-logo {
+  position: absolute; /* Thiết lập vị trí tuyệt đối */
+    left: -80px; /* bắt đầu ngoài header bên trái */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+    animation: logo-slide 9s linear ; /* Thêm animation */
+  z-index: -1; /* Đặt phía sau text */
+  opacity: 1;
+}
+
+@keyframes logo-slide {
+    from {
+        transform: translate(-80px, -50%);
+    }
+    to {
+      transform: translate(100vw, -50%); /* Đi đến hết chiều rộng màn hình */
+    }
+}
+
+.balance-section {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.balance {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.button-logout {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button-logout:hover {
+    color: #f3f4f6;
+    background-color: #dc2626;
+}
+
+.button-recharge {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button-recharge:hover {
+    background-color: #fbbf24;
+}
+
+.button-location {
+    background: linear-gradient(90deg, #34d399, #10b981);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-location:hover {
+    background: linear-gradient(90deg, #10b981, #34d399);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-location:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(16, 185, 129, 0.5);
+}
+
+.navigation-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 50px;
+}
+
+.nav-select {
+    background-color: white;
+    border-radius: 5px;
+    min-width: 200px;
+    margin-right: 1rem;
+}
+
+.categories {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #2563eb;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category:hover {
+    background-color: #f3f4f6;
+    color: #2563eb;
+    transform: scale(1.1);
+}
